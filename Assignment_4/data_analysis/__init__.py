@@ -1,5 +1,4 @@
-import pandas as pd, requests, io
+from .core import DataInspector, PlottingMethods
 
-url = "https://covid.ourworldindata.org/data/owid-covid-data.csv"
-raw_df = pd.read_csv(io.StringIO(requests.get(url).text),
-                     na_values=["","N/A","NA","NULL","null","?"], low_memory=False)
+__version__ = "0.1.0"
+__all__ = ["DataInspector", "PlottingMethods"]
